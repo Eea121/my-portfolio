@@ -727,7 +727,7 @@
       margin-top: 4rem;
     }
 
-    /* --- Education Section --- */
+   /* --- Education Section --- */
     #education {
       background: var(--bg);
       padding: 5rem 0;
@@ -771,9 +771,34 @@
 
     .edu-details h4 {
       font-size: 1.1rem;
-      color: var(--gray);
-      font-weight: 500;
+      color: var(--black);
+      font-weight: 600;
       margin-bottom: 1rem;
+    }
+
+    /* New styles for achievements */
+    .edu-achievements {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .achieve-item {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .achieve-label {
+      font-weight: 600;
+      color: var(--gray);
+    }
+
+    .achieve-value {
+      color: var(--black);
+      font-weight: 500;
     }
 
     .edu-date {
@@ -787,6 +812,18 @@
       display: inline-block;
     }
 
+    /* Responsive adjustment for Education */
+    @media (max-width: 1024px) {
+      .edu-card {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        align-items: center;
+      }
+      .achieve-item {
+        justify-content: center;
+      }
+    }
     /* --- Contact Section --- */
     #contact {
       background: var(--black);
@@ -1334,7 +1371,17 @@
         <div class="edu-icon"><i class="fas fa-university"></i></div>
         <div class="edu-details">
           <h3>Misr University for Science and Technology (MUST)</h3>
-          <h4>Computer and Information Sciences, General (B.Sc.)</h4>
+          <h4>B.Sc. in Information Technology — Computer Science</h4>
+          <div class="edu-achievements">
+            <div class="achieve-item">
+              <span class="achieve-label">GPA:</span>
+              <span class="achieve-value">3.47 (Very Good with Honors)</span>
+            </div>
+            <div class="achieve-item">
+              <span class="achieve-label">Graduation Project:</span>
+              <span class="achieve-value">Excellent</span>
+            </div>
+          </div>
           <span class="edu-date">October 2022 – July 2026</span>
         </div>
       </div>
